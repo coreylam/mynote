@@ -1,3 +1,5 @@
+echo "dd all files"
+git add ./
 echo "git commit"
 git commit -m "add new files"
 echo "git push"
