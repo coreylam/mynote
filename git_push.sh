@@ -1,4 +1,4 @@
-echo "dd all files"
+echo "add all files"
 git add ./
 echo "git commit"
 git commit -m "add new files"
