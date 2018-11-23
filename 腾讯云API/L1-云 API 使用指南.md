@@ -31,13 +31,13 @@ python --version
 SecretId：
 
 ```
-AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk
+*****************************************
 ```
 
 SecretKey：
 
 ```
-rY5VmsobGoBM2YsFWcXG0c3HMI2f6OVU
+***********************************
 ```
 
 SecretId 用于标识 API 调用者身份 SecretKey 用于加密签名字符串和服务器端验证签名字符串的密钥。 用户必须严格保管安全凭证，避免泄露。API 密钥是构建腾讯云 API 请求的重要凭证，使用腾讯云 API 可以操作您名下的所有腾讯云资源，为了您的财产和服务安全，请妥善保存和定期更换密钥，当您更换密钥后，请及时删除旧密钥。
@@ -98,7 +98,7 @@ SecretId 用于标识 API 调用者身份 SecretKey 用于加密签名字符串�
 { 
     'Action' : 'DescribeRegions’, 
     'Nonce' : 11886,
-    'SecretId' : 'AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk',
+    'SecretId' : '*************************',
      'Timestamp' : 1465185768, 
     'Version' : '2017-03-12', 
 }
@@ -111,7 +111,7 @@ SecretId 用于标识 API 调用者身份 SecretKey 用于加密签名字符串�
 ```
 Action=DescribeRegions&
 Nonce=11886&
-SecretId=AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk&
+SecretId=***************************
 Timestamp=1465185768
 Version=2017-03-12&
 ```
@@ -131,7 +131,7 @@ Version=2017-03-12&
 请求方法 + 请求主机 +请求路径 + ? + 请求字符串
 
 ```
-GETcvm.tencentcloudapi.com/?Action=DescribeRegions&Nonce=11886&SecretId=AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk&Timestamp=1465185768&Version=2017-03-12
+GETcvm.tencentcloudapi.com/?Action=DescribeRegions&Nonce=11886&SecretId=***************************&Timestamp=1465185768&Version=2017-03-12
 ```
 
 ### 加密生成签名串
@@ -153,8 +153,8 @@ vim demo_1.py
 例如：请注意将密钥信息修改成自己的！
 
 ```
-SecretId = "AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk"
-SecretKey = "rY5VmsobGoBM2YsFWcXG0c3HMI2f6OVU"
+SecretId = "*********************************"
+SecretKey = "**************************"
 ```
 
 ### 填写必须信息
@@ -260,7 +260,7 @@ for eveData in json.loads(urllib.request.urlopen(url).read().decode("utf-8"))["R
 ```python
 ## 请将如下的SecretId,SecretKey更换为自己的密钥
 SecretId = "AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk"
-SecretKey = "rY5VmsobGoBM2YsFWcXG0c3HMI2f6OVU"
+SecretKey = "***************************"
 
 '''
 Timestamp Integer 是 当前 UNIX 时间戳，可记录发起 API 请求的时间。例如1529223702，如果与当前时间相差过大，会引起签名过期错误。
@@ -390,7 +390,7 @@ AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk
 SecretKey：
 
 ```
-rY5VmsobGoBM2YsFWcXG0c3HMI2f6OVU
+*****************************
 ```
 
 SecretId 用于标识 API 调用者身份 SecretKey 用于加密签名字符串和服务器端验证签名字符串的密钥。 用户必须严格保管安全凭证，避免泄露。
@@ -434,7 +434,7 @@ vim demo_2.py
 
 ```
 SecretId = "AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk"
-SecretKey = "rY5VmsobGoBM2YsFWcXG0c3HMI2f6OVU"
+SecretKey = "***********************"
 
 import time
 uri = "cvm.tencentcloudapi.com"
@@ -538,7 +538,7 @@ print(json.loads(urllib.request.urlopen(url).read().decode("utf-8")))
 
 ```
 SecretId = "AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk"
-SecretKey = "rY5VmsobGoBM2YsFWcXG0c3HMI2f6OVU"
+SecretKey = "*******************************"
 
 import time
 uri = "cvm.tencentcloudapi.com"
@@ -642,7 +642,7 @@ vim demo_3.py
 
 ```
 SecretId = "AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk"
-SecretKey = "rY5VmsobGoBM2YsFWcXG0c3HMI2f6OVU"
+SecretKey = "*****************************"
 
 
 import time
@@ -747,7 +747,7 @@ print(json.loads(urllib.request.urlopen(url).read().decode("utf-8")))
 
 ```
 SecretId = "AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk"
-SecretKey = "rY5VmsobGoBM2YsFWcXG0c3HMI2f6OVU"
+SecretKey = "*****************************"
 
 import time
 uri = "cvm.tencentcloudapi.com"
@@ -859,7 +859,7 @@ vim demo_4.py
 
 ```
 SecretId = "AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk"
-SecretKey = "rY5VmsobGoBM2YsFWcXG0c3HMI2f6OVU"
+SecretKey = "*************************"
 
 import time
 uri = "cvm.tencentcloudapi.com"
@@ -965,7 +965,7 @@ print(json.loads(urllib.request.urlopen(url).read().decode("utf-8")))
 
 ```
 SecretId = "AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk"
-SecretKey = "rY5VmsobGoBM2YsFWcXG0c3HMI2f6OVU"
+SecretKey = "*************************"
 
 import time
 uri = "cvm.tencentcloudapi.com"
@@ -1124,7 +1124,7 @@ AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk
 SecretKey：
 
 ```
-rY5VmsobGoBM2YsFWcXG0c3HMI2f6OVU
+*************************
 ```
 
 SecretId 用于标识 API 调用者身份 SecretKey 用于加密签名字符串和服务器端验证签名字符串的密钥。 用户必须严格保管安全凭证，避免泄露。
@@ -1176,7 +1176,7 @@ from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentClo
 from tencentcloud.cvm.v20170312 import cvm_client, models
 try:
     # 实例化一个认证对象，入参需要传入腾讯云账户secretId，secretKey
-    cred = credential.Credential("AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk", "rY5VmsobGoBM2YsFWcXG0c3HMI2f6OVU")
+    cred = credential.Credential("AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk", "***********************")
 
     # 实例化要请求产品(以cvm为例)的client对象
     client = cvm_client.CvmClient(cred, "ap-shanghai")
@@ -1231,7 +1231,7 @@ from tencentcloud.cvm.v20170312 import cvm_client, models
 
 try:
     # 实例化一个认证对象，入参需要传入腾讯云账户secretId，secretKey
-    cred = credential.Credential("AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk", "rY5VmsobGoBM2YsFWcXG0c3HMI2f6OVU")
+    cred = credential.Credential("AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk", "******************")
 
     # 实例化要请求产品(以cvm为例)的client对象，clientProfile是可选的。
     client = cvm_client.CvmClient(cred, "ap-shanghai")
@@ -1359,7 +1359,7 @@ AKIDGRSHz3e17HVaVEeEWddR4Wr1zmNld5yk
 SecretKey：
 
 ```
-rY5VmsobGoBM2YsFWcXG0c3HMI2f6OVU
+************************
 ```
 
 SecretId 用于标识 API 调用者身份 SecretKey 用于加密签名字符串和服务器端验证签名字符串的密钥。 用户必须严格保管安全凭证，避免泄露。
